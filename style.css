@@ -1,0 +1,117 @@
+body{
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    color: #3a3a3a;
+    text-shadow: 0 4px 16px #fff8, 0 1px 0 #fff;
+    animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #444;
+    text-shadow: 0 2px 8px #fff7;
+    animation: fadeIn 1.2s;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    margin-top: 40px;
+    animation: fadeInUp 1.2s;
+}
+.btn{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 5px solid black;
+    box-shadow: 0 8px 24px #0002, 0 1.5px 0 #fff7 inset;
+    transition: 
+        transform 0.15s cubic-bezier(.68,-0.55,.27,1.55),
+        box-shadow 0.2s,
+        background 0.2s;
+}
+.btn:hover, .btn:active {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 12px 32px #0003, 0 2px 0 #fff7 inset;
+    filter: brightness(1.1);
+}
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 32px 8px #fff8;
+    transition: opacity 0.2s;
+}
+.btn.flash::after,
+.btn.userflash::after {
+    opacity: 1;
+    animation: btnFlash 0.2s;
+}
+.red{
+    background-color: #d95980;
+}
+.yellow{
+    background-color: #f99b45;
+}
+.green{
+    background-color: #63aac0;
+}
+.purple{
+    background-color: #819ff9;
+}
+.flash{
+    background-color: white;
+}    
+.userflash{
+    background-color: green;
+}    
+@keyframes btnFlash {
+    0% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.7) rotate(-10deg); opacity: 0; }
+    80% { transform: scale(1.1) rotate(2deg); }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(60px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@media (max-width: 600px) {
+    .btn-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .btn {
+        width: 70px;
+        height: 70px;
+        font-size: 18px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1rem; }
+}
