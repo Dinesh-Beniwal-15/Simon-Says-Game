@@ -5,7 +5,7 @@ A classic memory-based game where players repeat an increasingly long sequence o
 
 🌐 Live Demo:
 
-👉 
+👉 https://dinesh-beniwal-15.github.io/Simon-Says-Game/
 
 
 
