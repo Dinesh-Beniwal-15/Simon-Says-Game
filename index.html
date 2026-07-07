@@ -8,20 +8,45 @@
 
 </head>
 <body>
-    <h1>Simon Game</h1>
-    <h2>Press any key to start</h2>
+    <main class="game-shell">
+        <h1>Simon Game</h1>
+        <p class="subtitle">Repeat the pattern. It gets faster every round.</p>
 
-    <div class="btn-container">
-        <div>
-            <div class="btn red" id="red" type="button">1</div>
-            <div class="btn yellow"  id="yellow" type="button">2</div>
+        <section class="hud" aria-label="Game stats">
+            <article class="stat-card">
+                <p class="stat-label">Level</p>
+                <p class="stat-value" id="level-value">0</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Score</p>
+                <p class="stat-value" id="score-value">0</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Best</p>
+                <p class="stat-value" id="best-value">0</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-label">Lives</p>
+                <p class="stat-value" id="lives-value">3</p>
+            </article>
+        </section>
+
+        <section class="controls" aria-label="Game controls">
+            <button id="start-btn" class="control-btn">Start / Restart</button>
+            <button id="strict-btn" class="control-btn">Strict: Off</button>
+        </section>
+
+        <h2 id="status-text">Press Start to begin</h2>
+
+        <div class="btn-container">
+            <button class="btn red" id="red" data-color="red">Red</button>
+            <button class="btn yellow" id="yellow" data-color="yellow">Yellow</button>
+            <button class="btn green" id="green" data-color="green">Green</button>
+            <button class="btn purple" id="purple" data-color="purple">Purple</button>
         </div>
 
-        <div>
-            <div class="btn green" id="green" type="button">3</div>
-            <div class="btn purple" id="purple" type="button">4</div>
-        </div>
-    </div>
+        <p class="help-text">Keyboard: R/Y/G/P or 1/2/3/4</p>
+    </main>
 
     <script src="app.js"></script>
 </body>

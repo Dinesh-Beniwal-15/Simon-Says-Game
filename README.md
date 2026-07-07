@@ -1,99 +1,38 @@
-🎮 Simon Says Game:
+## Simon Says Game
 
-A classic memory-based game where players repeat an increasingly long sequence of colors and sounds. This is a web-based implementation with a colorful, responsive design, smooth animations, and visual feedback.
+A browser-based Simon game with progressive speed, score tracking, strict mode, lives mode, keyboard input, and synthesized sound feedback.
 
+### Live Demo
 
-🌐 Live Demo:
+https://dinesh-beniwal-15.github.io/Simon-Says-Game/
 
-👉 https://dinesh-beniwal-15.github.io/Simon-Says-Game/
+### Features
 
+1. Progressive rounds with faster sequence playback at higher levels.
+2. Score system with persistent best score using localStorage.
+3. Normal mode (3 lives) and strict mode (1 mistake ends the run).
+4. Keyboard controls (`R/Y/G/P` or `1/2/3/4`) plus mouse/touch support.
+5. Dynamic status updates and responsive modern UI.
+6. Built-in audio tones for each color and game-over feedback.
 
+### How to Play
 
-✨ Features:
+1. Click **Start / Restart** (or press Enter/Space when idle).
+2. Watch the sequence of flashing colors.
+3. Repeat the sequence using buttons or keyboard.
+4. In normal mode, mistakes cost a life and replay the current sequence.
+5. In strict mode, one mistake ends the game immediately.
 
-🎯 Interactive Gameplay – Click the colored buttons to repeat the sequence
+### Project Structure
 
-💡 Visual Feedback – Buttons flash when activated by the game or user
+- `index.html` - App layout and controls.
+- `style.css` - Responsive styles and animations.
+- `app.js` - Core game state and gameplay logic.
 
-📈 Progressive Difficulty – Sequence length increases with each level
+### Run Locally
 
-🏆 Score Tracking – Current level displayed as your score
+No build tools are required.
 
-📱 Responsive Design – Works on both desktop and mobile devices
-
-🎨 Attractive UI – Gradient background, stylish buttons, and animations
-
-
-🕹️ How to Play:
-
-Press any key to start the game
-
-Watch carefully as the game flashes a sequence of colors
-
-Click the buttons in the same order
-
-If correct → another color is added to the sequence
-
-If wrong → game ends and shows your final score
-
-Press any key again to restart
-
-
-📂 File Structure:
-simon-game/
-│── index.html   # Main HTML structure  
-│── style.css    # Styling and animations  
-└── app.js       # Game logic and functionality  
-
-
-🛠️ Technologies Used:
-
-HTML5
-
-CSS3 (flexbox, animations, gradients)
-
-JavaScript (ES6)
-
-
-🌍 Browser Compatibility:
-
-✅ Works on all modern browsers supporting:
-
-CSS Flexbox
-
-CSS Animations
-
-ES6 JavaScript features
-
-
-⚡ Installation & Setup:
-
-No installation required 🚀
-
-Download all files (index.html, style.css, app.js)
-
-Place them in the same folder
-
-Open index.html in your browser
-
-
-🎨 Customization:
-
-Change button colors → in style.css (.red, .yellow, .green, .purple)
-
-Adjust animation timings → in style.css (@keyframes)
-
-Modify difficulty → in app.js (flash duration & delays)
-
-
-🧠 Game Logic:
-
-Game generates a random sequence of colors
-
-Player must replicate the sequence exactly
-
-Each correct round → adds a new color
-
-Wrong input → game ends
-
+1. Download or clone this repository.
+2. Open `index.html` in any modern browser.
 
